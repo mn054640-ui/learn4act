@@ -1,0 +1,13 @@
+name: Ping Google on dev push
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  ping-google:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Google 4 times
+        run: ping -c 4 google.com
